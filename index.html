@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo Webpage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-500 min-h-screen flex flex-col items-center justify-start p-5">
+
+  <div class="w-full max-w-2xl">
+    
+    <div class="text-center mb-8">
+      <h1 class="text-white text-4xl font-bold mb-4">Todo Webpage</h1>
+      <div class="flex justify-center gap-6">
+        <a href="#" class="bg-white/40 hover:bg-white/50 text-white font-medium px-5 py-2 rounded transition-all active">Add Todo</a>
+        <a href="#" class="bg-white/20 hover:bg-white/30 text-white font-medium px-5 py-2 rounded transition-all">View Todos</a>
+        <a href="#" class="bg-white/20 hover:bg-white/30 text-white font-medium px-5 py-2 rounded transition-all">Edit Todo</a>
+      </div>
+    </div>
+
+    
+    <div class="bg-white rounded-xl shadow-lg p-10">
+      <h2 class="text-green-800 text-2xl font-semibold text-center mb-6">Add Todo</h2>
+      <form>
+       
+        <div class="mb-5">
+          <label for="title" class="block text-green-800 font-medium mb-2">Title*</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Enter title"
+            required
+            class="w-full border-2 border-gray-200 rounded px-4 py-3 text-sm focus:outline-none focus:border-blue-500"
+          />
+        </div>
+
+       
+        <div class="mb-5">
+          <label for="description" class="block text-green-800 font-medium mb-2">Description</label>
+          <textarea
+            id="description"
+            name="description"
+            placeholder="Optional description"
+            class="w-full border-2 border-gray-200 rounded px-4 py-3 text-sm resize-y min-h-[80px] focus:outline-none focus:border-blue-500"
+          ></textarea>
+        </div>
+
+
+        <div class="mb-5">
+          <label for="due-date" class="block text-green-800 font-medium mb-2">Due Date</label>
+          <input
+            type="date"
+            id="due-date"
+            name="due-date"
+            class="w-full border-2 border-gray-200 rounded px-4 py-3 text-sm focus:outline-none focus:border-blue-500"
+          />
+        </div>
+
+       
+        <div class="mb-5">
+          <label for="priority" class="block text-green-800 font-medium mb-2">Category</label>
+          <select
+            id="priority"
+            name="priority"
+            class="w-full border-2 border-gray-200 rounded px-4 py-3 text-sm focus:outline-none focus:border-blue-500"
+          >
+            <option value="">--Select--</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+
+       
+        <div class="text-center">
+          <button
+            type="submit"
+            class="bg-green-800 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded transition-all"
+          >
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
